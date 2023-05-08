@@ -28,10 +28,10 @@ impl GenerateOptions {
             input_path,
             output_path,
 
-            header: "".to_string(),
-            pre_imports: "".to_string(),
-            data_varname: "data".to_string(),
-            escape_function: "".to_string(),
+            header: "".to_owned(),
+            pre_imports: "".to_owned(),
+            data_varname: "data".to_owned(),
+            escape_function: "".to_owned(),
         }
     }
 
@@ -75,7 +75,7 @@ impl GenerateOptions {
 
 pub fn escape(data: &String) -> String {
     return data
-        .replace("\n", "\\n")
         .replace("\\", "\\\\")
+        .replace("\n", "\\n")
         .replace("\"", "\\\"");
 }

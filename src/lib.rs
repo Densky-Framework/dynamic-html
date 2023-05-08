@@ -104,7 +104,7 @@ impl DynamicHtml {
                 format!("import {} from \"{}\"", imports, resolved_path)
             })
             .reduce(|acc, e| acc + ";\n" + &e)
-            .unwrap()
+            .unwrap_or("".to_owned())
             + ";";
 
         let body = self
@@ -120,11 +120,11 @@ impl DynamicHtml {
                 _ => "// INVALID TYPE".to_string(),
             })
             .reduce(|acc, e| acc + ";\n  " + &e)
-            .unwrap()
+            .unwrap_or("".to_owned())
             + ";";
 
         format!(
-            "{}\n{}\n\n{}
+            "{}\n{}\n{}
 
 export default function({}: any, __output__: string = \"\"): string {}
   {}
