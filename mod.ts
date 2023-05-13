@@ -28,6 +28,6 @@ export function parse(content: string, options: GenerateOptions): string {
       escape_function: "",
 
       ...options,
-    })
+    }),
   );
 }

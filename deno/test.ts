@@ -1,7 +1,8 @@
-import {parse} from "../mod.ts"
+import { parse } from "../mod.ts";
 
 Deno.test("Simple", () => {
-console.log(parse(`
+  console.log(parse(
+    `
         <!DOCTYPE html>
         <html>
             <head>
@@ -18,8 +19,10 @@ console.log(parse(`
                 \"I'm the best hacker jajajajaj\"
             </body>
         </html>
-        `, {
-          input_path: "/a.html",
-          output_path: ""
-        }))
-})
+        `,
+    {
+      input_path: "/a.html",
+      output_path: "",
+    },
+  ));
+});
