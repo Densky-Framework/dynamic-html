@@ -135,6 +135,7 @@ export default function({}: any, __output__: string = \"\"): string {}
     }
 }
 
+#[cfg(feature = "wasm")]
 #[wasm_bindgen]
 pub fn parse(content: String, options: String) -> Result<String, JsValue> {
     println!("{:?}", &options);

@@ -1,6 +1,10 @@
+#[cfg(feature = "wasm")]
 use serde::Deserialize;
+
+#[cfg(feature = "wasm")]
 use serde_json::Value;
 
+#[cfg(feature = "wasm")]
 #[derive(Deserialize)]
 pub struct GenerateOptionsWasm {
     pub input_path: String,
