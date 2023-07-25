@@ -8,6 +8,8 @@ pub use generate::GenerateOptions;
 use parser::{handle_expression, normalize, search_delimiter};
 use parser::{HtmlImportPart, HtmlPart, ParseError, CLOSE_DELIMITER, OPEN_DELIMITER};
 use pathdiff::diff_paths;
+
+#[cfg(feature = "wasm")]
 use wasm_bindgen::prelude::*;
 
 #[derive(Debug, Clone)]

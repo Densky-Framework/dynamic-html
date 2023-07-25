@@ -61,6 +61,7 @@ impl GenerateOptions {
         self
     }
 
+    #[cfg(feature = "wasm")]
     pub fn from_json(wasm: String) -> GenerateOptions {
         let wasm_value: Value = serde_json::from_str(&wasm).unwrap();
         let wasm_value = match wasm_value {
