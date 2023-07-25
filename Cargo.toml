@@ -1,7 +1,12 @@
 [package]
 name = "dynamic-html"
-version = "0.1.0"
+description = "Transpiler from dynamic-html to typescript"
+version = "1.0.0"
 edition = "2021"
+license = "MIT"
+homepage = "https://github.com/Densky-Framework/dynamic-html"
+documentation = "https://html.densky.apika.me"
+repository = "https://github.com/Densky-Framework/dynamic-html"
 #
 # [lib]
 # crate-type = ["cdylib"]
