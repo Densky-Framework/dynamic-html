@@ -2,7 +2,6 @@
 name = "dynamic-html"
 description = "Transpiler from dynamic-html to typescript"
 version = "1.0.0"
-edition = "2021"
 license = "MIT"
 homepage = "https://github.com/Densky-Framework/dynamic-html"
 documentation = "https://html.densky.apika.me"
@@ -12,7 +11,7 @@ repository = "https://github.com/Densky-Framework/dynamic-html"
 # crate-type = ["cdylib"]
 
 [features]
-default = ["wasm"]
+default = []
 wasm = ["dep:wasm-bindgen", "dep:serde", "dep:serde_json"]
 
 [dependencies]

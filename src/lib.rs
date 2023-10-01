@@ -1,3 +1,9 @@
+extern crate pathdiff;
+extern crate regex;
+
+#[cfg(feature = "wasm")]
+extern crate wasm_bindgen;
+
 pub mod generate;
 pub mod parser;
 
