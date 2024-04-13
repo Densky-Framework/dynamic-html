@@ -2,6 +2,10 @@ extern crate pathdiff;
 extern crate regex;
 
 #[cfg(feature = "wasm")]
+extern crate serde;
+#[cfg(feature = "wasm")]
+extern crate serde_json;
+#[cfg(feature = "wasm")]
 extern crate wasm_bindgen;
 
 pub mod generate;
